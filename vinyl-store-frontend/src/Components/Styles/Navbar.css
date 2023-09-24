@@ -1,0 +1,53 @@
+/* Navbar styling */
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 30%);
+  }
+  
+  /* Logo styling */
+  .logo img {
+    height: 4rem; /* Adjust the height as needed */
+  }
+  
+  /* Navigation links styling */
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 5vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a.active {
+    text-decoration-line: underline;
+    color: red; /* Current page link color */
+    text-underline-offset: 0.3rem;
+  }
+  
+  /* User actions styling */
+  .user-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Add more styling for the search, cart, and user icons here */
+  .nicon {
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add margin between icons if desired */
+  }
