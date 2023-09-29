@@ -43,7 +43,7 @@ const Login = ({ handleToggleForm }) => {
       const user = userCredential.user;
   
       localStorage.setItem('uid', user.uid);
-      const response = await fetch(`http://localhost:5001/getDisplayName?uid=${user.uid}`);
+      const response = await fetch(`https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/getDisplayName?uid=${user.uid}`);
       if (response.ok) {
         const data = await response.json();
         setDisplayName(data.displayName);
@@ -62,7 +62,7 @@ const Login = ({ handleToggleForm }) => {
       const userCredential = await signInWithPopup(auth, provider);
       const user = userCredential.user;
   
-      const response = await fetch(`http://localhost:5001/checkUserData?uid=${user.uid}`);
+      const response = await fetch(`https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/checkUserData?uid=${user.uid}`);
       if (response.ok) {
         const userData = await response.json();
         const { uid, displayName } = userData;
@@ -74,7 +74,7 @@ const Login = ({ handleToggleForm }) => {
         setDisplayName(displayName);
       } else {
         const { uid, displayName } = user;
-        await axios.post('http://localhost:5001/saveUserData', { uid, displayName });
+        await axios.post('https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/saveUserData', { uid, displayName });
         setDisplayName(displayName);
         localStorage.setItem('uid', uid);
         localStorage.setItem('displayName', displayName);

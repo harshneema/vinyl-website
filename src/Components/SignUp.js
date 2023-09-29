@@ -24,7 +24,7 @@ const Signup = ({ onSignup }) => {
       });
   
       const { uid, displayName } = user;
-      await axios.post('http://localhost:5001/saveUserData', { uid, displayName });
+      await axios.post('https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/saveUserData', { uid, displayName });
   
       // Sign out the user after signing them up
       await signOut(auth);

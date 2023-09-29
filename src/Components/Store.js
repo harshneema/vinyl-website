@@ -47,7 +47,7 @@ function Store() {
       const uid = localStorage.getItem('uid');
   
       // Send a POST request to add the item to the user's cart
-      await axios.post('http://localhost:5001/addOrder', {
+      await axios.post('https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/addOrder', {
         uid: uid,
         order: {
           Title: record.title,         // Include the "Title" field
@@ -78,22 +78,18 @@ function Store() {
         setVinylRecords(response.data.results);
         setFilteredRecords(response.data.results);
         console.log(response.data.results);
-        console.log(response.data.results[0].id);
-        console.log(response.data.results[0].cover_image);
-        console.log(response.data.results[0].title);
         response.data.results.forEach(async (result, index) => {
-          console.log(`ID: ${result.id}`);
   
           try {
             // Send a POST request to store the data
-            await axios.post('http://localhost:5001/vinyls', {
+            await axios.post('https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/vinyls', {
               Title: result.title,
               coverImage: result.cover_image,
               id: result.id,
             });
             console.log('sent succesfully');
           } catch (error) {
-            console.error('Error storing vinyl record:', error);
+            console.error('Error storing vinyl record since it already exists');
           }
           
         });

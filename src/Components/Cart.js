@@ -15,7 +15,7 @@ function Cart() {
 
     const fetchDisplayName = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/getDisplayName?uid=${uid}`);
+        const response = await axios.get(`https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/getDisplayName?uid=${uid}`);
         if (response.status === 200) {
           setDisplayName(response.data.displayName);
         }
@@ -27,7 +27,7 @@ function Cart() {
     // Fetch the user's orders
     const fetchOrders = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/getOrders?uid=${uid}`);
+        const response = await axios.get(`https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/getOrders?uid=${uid}`);
         if (response.status === 200) {
           setOrders(response.data.orders);
         }
@@ -54,7 +54,7 @@ const updateOrderCount = async (orderId, newCount) => {
     // Send a request update the order count
     try {
       const uid = localStorage.getItem('uid'); // Get the user's UID from localStorage
-      const response = await axios.put(`http://localhost:5001/updateOrderCount`, {
+      const response = await axios.put(`https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/updateOrderCount`, {
         uid: uid,
         orderId: orderId,
         newCount: newCount,
@@ -133,7 +133,7 @@ const updateOrderCount = async (orderId, newCount) => {
   const deleteOrder = async (orderId) => {
     try {
       const uid = localStorage.getItem('uid'); // Get the user's UID from localStorage
-      const response = await axios.delete(`http://localhost:5001/deleteOrder`, {
+      const response = await axios.delete(`https://vinyl-website-backend-2ead81fa61bc.herokuapp.com/deleteOrder`, {
         data: {
           uid: uid,
           orderId: orderId,
