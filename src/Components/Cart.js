@@ -74,15 +74,6 @@ const updateOrderCount = async (orderId, newCount) => {
   };
 
     // Function to handle card deletion
-const deleteCard = (orderId) => {
-        // Make a copy of the orders array to avoid mutating the state directly
-        const updatedOrders = orders.filter((order) => order.id !== orderId);
-    
-    
-        // Update the state with the modified orders array
-        setOrders(updatedOrders);
-      };
-    
   
 
   const handleIncrement = (order) => {

@@ -63,51 +63,54 @@ function Store() {
     }
   };
 
-  const fetchVinylRecords = async () => {
-    try {
-      const response = await axios.get('https://api.discogs.com/database/search', {
-        params: {
-          q: 'vinyl',
-          type: 'release',
-          token: API_KEY,
-          page: page, // Include the current page number
-        },
-      });
-      setVinylRecords(response.data.results);
-      setFilteredRecords(response.data.results);
-      console.log(response.data.results);
-      console.log(response.data.results[0].id);
-      console.log(response.data.results[0].cover_image);
-      console.log(response.data.results[0].title);
-      response.data.results.forEach(async (result, index) => {
-        console.log(`ID: ${result.id}`);
-
-        try {
-          // Send a POST request to store the data
-          await axios.post('http://localhost:5001/vinyls', {
-            Title: result.title,
-            coverImage: result.cover_image,
-            id: result.id,
-          });
-          console.log('sent succesfully');
-        } catch (error) {
-          console.error('Error storing vinyl record:', error);
-        }
-        
-      });
-
-      
-      
-    } catch (error) {
-      console.error('Error fetching vinyl records:', error);
-      setError('Failed to fetch vinyl records. Please try again later.');
-    }
-  };
 
   useEffect(() => {
+    const fetchVinylRecords = async () => {
+      try {
+        const response = await axios.get('https://api.discogs.com/database/search', {
+          params: {
+            q: 'vinyl',
+            type: 'release',
+            token: API_KEY,
+            page: page, // Include the current page number
+          },
+        });
+        setVinylRecords(response.data.results);
+        setFilteredRecords(response.data.results);
+        console.log(response.data.results);
+        console.log(response.data.results[0].id);
+        console.log(response.data.results[0].cover_image);
+        console.log(response.data.results[0].title);
+        response.data.results.forEach(async (result, index) => {
+          console.log(`ID: ${result.id}`);
+  
+          try {
+            // Send a POST request to store the data
+            await axios.post('http://localhost:5001/vinyls', {
+              Title: result.title,
+              coverImage: result.cover_image,
+              id: result.id,
+            });
+            console.log('sent succesfully');
+          } catch (error) {
+            console.error('Error storing vinyl record:', error);
+          }
+          
+        });
+  
+        
+        
+      } catch (error) {
+        console.error('Error fetching vinyl records:', error);
+        setError('Failed to fetch vinyl records. Please try again later.');
+      }
+      // ... rest of the function remains the same
+    };
+  
     fetchVinylRecords();
     console.log('fetching');
-  }, [page]); // Include 'page' in the dependency array
+  }, [page]); // No need to include fetchVinylRecords in the dependency array anymore
+  
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);

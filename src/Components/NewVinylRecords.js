@@ -1,6 +1,6 @@
 import React from 'react';
 import './Styles/NewVinylRecords.css'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
 
 const albums = [

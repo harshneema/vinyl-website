@@ -1,10 +1,9 @@
-import React, { useRef,useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from './Navbar'; 
 import './Styles/Home.css';
 import HorizontalScroller from './HortizontalScroller';
 import NewVinylRecords from './NewVinylRecords';
 import BottomBar from './BottomBar';
-import { albumData, albumData1,albumData2 } from './albumData';
 
 
 const albums = [

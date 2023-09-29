@@ -1,8 +1,7 @@
 import React from 'react';
 import './Styles/HorizontalScroller.css'; // Import the CSS file from HorizontalScroller
-import mainLogo from './Assets/vinyl.png';
 import Navbar from './Navbar'; 
-import { motion, useAnimation } from 'framer-motion';
+import { motion,  } from 'framer-motion';
 import BottomBar from './BottomBar';
 
 
