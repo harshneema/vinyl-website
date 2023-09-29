@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Fade, Slide } from 'react-reveal';  // Importing React Reveal animations
+
 import './Styles/HorizontalScroller.css';
 import TracklistSection from './TracklistSection';
 import { albumData0, albumData1,albumData2 } from './albumData';
@@ -46,7 +46,7 @@ function HorizontalScroller({ albums }) {
 
     return (
         <div>
-            <Fade>  {/* Adding fade animation to the Slider */}
+            
                 <Slider {...settings}>
                     {albums.map((album, index) => (
                         <AnimatePresence key={index}>
@@ -82,7 +82,6 @@ function HorizontalScroller({ albums }) {
                         </AnimatePresence>
                     ))}
                 </Slider>
-            </Fade>
 
             {/* Album Detail Frame */}
             <AnimatePresence>
@@ -96,15 +95,15 @@ function HorizontalScroller({ albums }) {
                     >
                         <button onClick={() => setSelectedAlbum(null)}>Close</button>
                         <div className="detailFrameMain">
-                            <Slide left>  {/* Adding slide animation to the album details */}
+                            
                                 <h3>{selectedAlbumData.title}</h3>
                                 <h4>{selectedAlbumData.artist}</h4>
                                 <p>{selectedAlbumData.description}</p>
-                            </Slide>
+                            
                         </div>
                         <div className="detailFramestats">
-                            {/* More slide animations for the stats */}
-                            <Slide right cascade>
+                            
+                            
                                 <div className="detailStat">
                                     <h5>Producer</h5>
                                     <p>{selectedAlbumData.producer}</p>
@@ -129,7 +128,7 @@ function HorizontalScroller({ albums }) {
                                     <h5>Genre</h5>
                                     <p>{selectedAlbumData.genre}</p>
                                 </div>
-                            </Slide>
+                            
                         </div>
                         <TracklistSection tracklist={selectedAlbumData.tracklist} selected = {selectedAlbum} albumCover={selectedAlbumData.images[0]}/>
                     </motion.div>

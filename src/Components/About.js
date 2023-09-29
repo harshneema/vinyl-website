@@ -1,5 +1,4 @@
 import React from 'react';
-import { Reveal } from 'react-reveal';
 import './Styles/HorizontalScroller.css'; // Import the CSS file from HorizontalScroller
 import mainLogo from './Assets/vinyl.png';
 import Navbar from './Navbar'; 
