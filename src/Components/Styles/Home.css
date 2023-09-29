@@ -1,0 +1,25 @@
+
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.home{
+    background-color: #efefef;
+}
+  
+  .album-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: 80vh;
+  }
+  
+  /* Scroll-snap elements */
+  .album-card {
+    scroll-snap-align: start;
+  }
+
+  .slick-slider{
+    margin-top: -15vh;
+  }
+

@@ -1,0 +1,114 @@
+.new-vinyl-records {
+    margin-top: 4vw;
+    padding: 20px 4vw;
+    overflow: scroll;
+}
+.new-vinyl-records hr{
+    margin: 0;
+}
+.title-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.title-button h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 1vw;
+}
+
+.title-button button {
+    background: none;
+    border: none;
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.album-container-parent {
+    display: flex;
+    align-items: center;
+    height: 40vw;
+    padding-top: 3vw;
+}
+
+.album-container-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 60vw;
+}
+
+.album-container-vertical {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw; 
+    width: 30vw;
+    margin-bottom: -7vw;
+}
+
+.album {
+    width: 28vw; 
+    margin: 1vw;
+}
+
+.album img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.album p.artist {
+    font-weight: bold;
+}
+
+.album p.album-name {
+    font-style: italic;
+    margin: 5px 0;
+    margin-top: -0.5vw;
+}
+
+.vinyl-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: -15px;
+    color: #333;
+}
+
+/* Styling for the vertical albums */
+.album-container-vertical .album {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 2vw; 
+    height: 18vw;
+}
+
+.album-container-vertical .album .album-content {
+    display: flex; 
+    align-items: center;
+}
+
+.album-container-vertical .album img {
+    max-width: 30%; 
+    height: auto;
+    margin-right: 2vw;
+}
+
+.album-container-vertical .album .album-vertical-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+.album-container-vertical .album .album-vertical-parent{
+    display: flex;
+
+}
+

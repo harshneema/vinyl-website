@@ -1,0 +1,89 @@
+/* login.css */
+
+  .loginParent{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-top: 10%;
+  }
+  .form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: ui-monospace;
+  }
+
+  .form-group input{
+    border: 1px solid white;
+    background: none;
+    width: 150%;
+    height: 35px;
+    color: white;
+  }
+  .form-group input::placeholder{
+    color: white;
+    padding-left: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.loginParent h3{
+    font-size: xxx-large;
+    font-weight: 200;
+    margin-right: 1.8vw;
+}
+.loginParent form{
+    margin-left: -15vw;
+    margin-right: 5vw;
+    text-align: end;
+}
+.loginParent form>button{
+    border:1px solid grey;
+    padding: 1vw 2vw;
+    font-size: smaller;
+    font-weight: 400;
+    border-radius: 8px;
+    margin: 1vw 0;
+  }
+
+  .form-group label{
+    margin-bottom: 0.5vw;
+    font-weight: 900;
+    letter-spacing: 0px;
+    font-size: 15px;
+  }
+
+  .UserProfile p{
+    margin-top: 3vw;
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .UserProfile p>span{
+    text-decoration: underline;
+  }
+
+  .logout-button{
+    border: 1px solid grey;
+    padding: 1vw 2vw;
+    font-size: smaller;
+    font-weight: 400;
+    border-radius: 8px;
+    margin: 1vw 0;
+  }
+
+  .login-button-google{
+    padding-left: 1vw;
+    margin-left: 3vw !important;
+  }
+  .login-submit .login-button {
+    border: 1px solid grey;
+    padding: 1vw 2vw;
+    font-size: smaller;
+    font-weight: 400;
+    border-radius: 8px;
+  }
+  .login-submit{
+    display: flex;
+    margin: 4vw -5vw;
+    justify-content: flex-end;
+  }

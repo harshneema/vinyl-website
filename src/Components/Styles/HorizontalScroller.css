@@ -1,0 +1,241 @@
+.slide {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlayHome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: -5vh;
+  }
+  
+  
+.recordInfoMain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .recordInfo {
+    flex: 30%;
+    padding: 12%;
+    color: white; 
+    /* font-family: 'Oswald', sans-serif; */
+  }
+  
+  .recordInfo h6 {
+    color: #ed4f4f; 
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 0px;
+    font-weight: 550;
+    letter-spacing: 2px;
+  }
+  
+  .recordInfo h3 , .detailFrameMain h3 , .detailFrameMain h4{
+    margin:0px;
+    margin-top: 2px;
+    padding-bottom: 5px;
+    font-size: 45px;
+    font-weight: 600;
+  }
+  .recordInfo h5 ,.detailFrameMain p{
+    margin: 0;
+    margin-top:10px;
+    font-size: 33px;
+    padding-bottom: 150px;
+    font-style: italic;
+    font-weight: 100;
+  }
+  
+  .recordExtraInfo {
+    margin-top: 10px;
+  }
+  
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price p {
+    padding-top: 4px;
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+  }
+  .recordSvg{
+    width: 56%;
+    margin-right: -10%;
+    filter: blur(0.5px);
+  }
+  
+  .bgHomeRecord{
+    filter: blur(3px);
+  }
+  .view-button {
+    text-decoration: underline;
+    /* Reset any other styles to none */
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+
+
+
+  .detailFrame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #efefef ; 
+    z-index: 1000; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+}
+
+.detailFrame button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.detailFrame p {
+    max-width: 50vw;
+    font-size: 28px;
+    text-align: center;
+}
+
+.detailFrameMain img{
+  width: 70%;
+  padding-bottom: 5%;
+}
+.about-header {
+  text-align: center;
+}
+.detailFrameMain{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.detailFrameMain p{
+  padding: 0 5vw;
+}
+.detailFrameMain h3{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.detailFramestats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+.detailStat {
+    flex-basis: calc(30% - 10px);
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailStat h5 {
+    font-size: 16px; 
+    margin-bottom: 5px; 
+    font-weight: 500;
+    
+}
+
+.detailStat p {
+    font-size: 14px; 
+    margin: 0; 
+    font-weight: 400;
+}
+
+.about-page .navbar {
+    background-color: #000000;
+}
+
+.about-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.about-header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.about-heading {
+  color: #000000;
+  font-size: 2.5em;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.detailFrameMain2 {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-family: cursive;
+}
+
+.detailFrameMain2 img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.detailFrameMain2 p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}

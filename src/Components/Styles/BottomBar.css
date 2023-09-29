@@ -1,0 +1,33 @@
+/* BottomBar.css */
+
+.bottom-bar-container {
+    display: flex;
+    text-align: center;
+    padding: 2vh;
+    margin: 0 10vw;
+    justify-content: center;
+    padding: 10vw 0;
+    font-size: medium;
+  }
+  
+  .bottom-bar-box {
+    display: inline-block;
+    border: 0.05px solid #333;
+    padding: 2vw 0;
+    font-size: large;
+  }
+  
+  .box-button {
+    padding: 5px 20px;
+    border:0;
+    cursor: pointer;
+    margin: 0.05px;
+  }
+  
+  .copyright-text {
+    margin: 0;
+    padding: 5px 20px;
+  }
+  
+  
+  
